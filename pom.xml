@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <modules>
+        <module>itrip-beans</module>
+        <module>itrip-dao</module>
+        <module>itrip-util</module>
+        <module>itrip-auth</module>
+    </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.2.11.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.xhx</groupId>
+    <artifactId>itrip-project</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>itrip-project</name>
+    <description>爱旅行后端项目</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <swagger.version>2.9.2</swagger.version>
+        <lombok.version>1.18.16</lombok.version>
+        <mybaitsplus.version>3.4.0</mybaitsplus.version>
+        <itrip.version>0.0.1-SNAPSHOT</itrip.version>
+    </properties>
+    <!--用于统一管理子模块用到的依赖的版本信息-->
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.xhx</groupId>
+                <artifactId>itrip-beans</artifactId>
+                <version>${itrip.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xhx</groupId>
+                <artifactId>itrip-dao</artifactId>
+                <version>${itrip.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.xhx</groupId>
+                <artifactId>itrip-util</artifactId>
+                <version>${itrip.version}</version>
+            </dependency>
+            <!--mybatis-plus-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>${mybaitsplus.version}</version>
+            </dependency>
+            <!--swagger2-->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger2</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!--swagger-ui -->
+            <dependency>
+                <groupId>io.springfox</groupId>
+                <artifactId>springfox-swagger-ui</artifactId>
+                <version>${swagger.version}</version>
+            </dependency>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+
+
+
+</project>
